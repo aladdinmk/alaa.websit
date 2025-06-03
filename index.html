@@ -80,3 +80,12 @@
       const user = userSelect.value;
       const msg = msgInput.value;
       if (!msg) return;
+      const messageDiv = document.createElement('div');
+      messageDiv.className = 'message';
+      messageDiv.innerHTML = `<strong>${user}:</strong> ${msg}`;
+      chatBox.appendChild(messageDiv);
+      msgInput.value = '';
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+  </script></body>
+</html>
