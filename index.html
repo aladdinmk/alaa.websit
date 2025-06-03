@@ -38,6 +38,88 @@
     s1.charset='UTF-8';
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
+      <!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شات موقع علاء</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      background-color: #007acc;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 24px;
+    }
+    #users {
+      background: white;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    #chat-box {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      background: #fff;
+    }
+    #message-input {
+      display: flex;
+      padding: 10px;
+      background: #eee;
+    }
+    #message-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    #message-input button {
+      margin-right: 10px;
+      padding: 10px;
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    .message {
+      margin-bottom: 10px;
+    }
+    .message strong {
+      color: #007acc;
+    }
+  </style>
+</head>
+<body>
+  <header>شات موقع علاء</header>
+  <div id="users">
+    <label>اختر المستخدم:</label>
+    <select id="user-select">
+      <option value="علاء">علاء</option>
+      <option value="ماريا">ماريا</option>
+    </select>
+  </div>
+  <div id="chat-box"></div>
+  <div id="message-input">
+    <input type="text" id="msg" placeholder="اكتب رسالة...">
+    <button onclick="sendMessage()">إرسال</button>
+  </div>  <script>
+    const chatBox = document.getElementById('chat-box');
+    const msgInput = document.getElementById('msg');
+    const userSelect = document.getElementById('user-select');
+
+    function sendMessage() {
+      const user = userSelect.value;
+      const msg = msgInput.value;
+      if (!msg) return;
     })();
   </script>
   <!--End of Tawk.to Script-->
